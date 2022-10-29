@@ -5,7 +5,6 @@ import messages.ExceptionMessages;
 
 public class PurchaseValidator {
 
-
     private int id;
     private double cost;
     private Type type;
@@ -21,7 +20,7 @@ public class PurchaseValidator {
     }
 
     public void setId(int id) {
-        if(id <= 0){
+        if (id <= 0) {
             throw new IllegalArgumentException(ExceptionMessages.PURCHASE_ID_LESS_OR_EQUALS_THAN_ZERO);
         }
         this.id = id;
@@ -32,7 +31,7 @@ public class PurchaseValidator {
     }
 
     public void setCost(double cost) {
-        if(cost < 0){
+        if (cost < 0) {
             throw new IllegalArgumentException(ExceptionMessages.PURCHASE_COST_LESS_THAN_ZERO);
         }
         this.cost = cost;

@@ -16,7 +16,6 @@ public class PurchaseApprovalExecutor {
     public static void execute() {
         Approver manager = new Manager();
         ApprovalChainGenerator.generate(manager);
-        //Be free to modify method below this line
 
         List<Purchase> purchases = new ArrayList<>();
 
@@ -24,6 +23,9 @@ public class PurchaseApprovalExecutor {
         purchases.add(new Purchase(2, 5000, Type.PC));
         purchases.add(new Purchase(3, 5000, Type.PC));
         purchases.add(new Purchase(4, 3000, Type.CLERICAL));
+        purchases.add(new Purchase(4, 300, Type.CONSUMABLES));
+        purchases.add(new Purchase(4, 499, Type.CONSUMABLES));
+        purchases.add(new Purchase(4, 1501, Type.GADGETS));
 
         purchases.add(new Purchase(-5, 10, Type.PC)); // should not be valid
         purchases.add(new Purchase(5, -10000, Type.PC));  // should not be valid
